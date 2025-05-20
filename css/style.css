@@ -1,0 +1,91 @@
+/* Reset & Body */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3d6aHJ3N21yeGNtd3NtaXdmYmJhMWF2ZHBrYWY2MHIwanZxOTRvaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/G4yCYvYCCPJgXIpaHY/giphy.gif') center/cover no-repeat;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #0ff;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Wrapper */
+.wrapper { position: relative; padding: 20px; backdrop-filter: brightness(1.3); }
+
+/* Neon */
+.neon {
+  font-size: 3rem;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #08f;
+}
+
+/* Glitch */
+.glitch {
+  position: relative; color: #f0f;
+}
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute; top:0; left:0;
+  opacity: 0.8;
+  clip: rect(0,900px,0,0);
+}
+.glitch::before { animation: glitchTop 2s infinite linear; }
+.glitch::after  { animation: glitchBottom 3s infinite linear; }
+@keyframes glitchTop {
+  10% { clip: rect(10px,9999px,50px,0); transform: translate(-3px,-3px); }
+  20% { clip: rect(85px,9999px,140px,0); transform: translate(3px,3px); }
+}
+@keyframes glitchBottom {
+  10% { clip: rect(140px,9999px,200px,0); transform: translate(3px,-3px); }
+  20% { clip: rect(85px,9999px,100px,0); transform: translate(-3px,3px); }
+}
+
+/* Blink */
+.blink { animation: blink 1s step-end infinite; }
+@keyframes blink { 50% { visibility: hidden; } }
+
+/* Floating GIF */
+.floating-gif { animation: float 4s ease-in-out infinite; }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+
+
+/* Drifted heads */
+#floating-corgis {
+  position: absolute; top:0; left:0;
+  width:100%; height:100%;
+  pointer-events: none;
+}
+
+/* Y2K text */
+.y2k-text {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px #000;
+}
+/* make the corgi-rain canvas fill the screen, behind your content */
+#corgi-rain {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+}
+
+#corgi-scene {
+  width: 500px;
+  height: 400px;
+  margin: 20px auto;
+  border: 5px ridge yellow;
+  background: rgba(0,0,0,0.5);
+  position: relative; /* for absolute‐positioned child */
+  overflow: hidden;
+}
+
+#corgi-scene iframe {
+  position: absolute;
+  top:    0;
+  left:   0;
+  width:  100%;
+  height: 100%;
+  border: none;
+}

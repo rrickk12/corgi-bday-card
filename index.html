@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>🐾 Happy Birthday, Carol! 🎉</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <!-- 1) Full-screen Canvas for “Matrix” corgi-head rain -->
+  <canvas id="corgi-rain"></canvas>
+
+  <!-- 2) Your existing 90’s/Y2K wrapper -->
+  <div class="wrapper">
+    <h1 class="blink glitch neon" data-text="Happy Birthday, Carol! 🐾🎉">
+      Happy Birthday, Carol! 🐾🎉
+    </h1>
+
+    <marquee behavior="alternate" scrollamount="15">
+      <img
+        src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWNqcmppemFtZnFtbTU5c212cHFib2RrMnA3eXQxbGo2MHk2a213cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KLbq09EoE1uDu/giphy.gif"
+        alt="dancing corgi"
+        class="floating-gif"
+      />
+    </marquee>
+
+    <div id="floating-corgis"></div>
+    <div id="corgi-scene">
+      <iframe
+        width="560" height="315"
+        src="https://www.youtube.com/embed/ZQCwNf0CDpI?autoplay=1&loop=1"
+        frameborder="0"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <marquee direction="right" scrollamount="12">
+      <img
+        src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGU3NmxmMXhweGQ5dGQ2ZGFkMng2cW5oNmVzMGVlcjZ1ZDV4dmI3bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZjUjG4xgRiSOc/giphy.gif"
+        alt="confetti burst"
+        class="floating-gif"
+      />
+    </marquee>
+
+    <p class="y2k-text glitch" data-text="May your day be as WTF-tastic as this page!">
+      May your day be as WTF-tastic as this page!
+    </p>
+  </div>
+
+  <!-- optional 90’s MIDI -->
+  <audio src="https://example.com/90s_background.mid" autoplay loop></audio>
+
+  <!-- 3) Load your module script (which now does the corgi-rain + confetti + floating heads) -->
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
